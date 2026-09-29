@@ -184,7 +184,7 @@ Location: `.github/workflows/`
 ### Other Configs
 
 - **.github/dependabot.yml** - Dependency updates
-- **.github/labels.yml** - Labels configuration
+- **.github/wotkflows/labels.yml** - Labels configuration
 
 ---
 
