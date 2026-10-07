@@ -2,7 +2,7 @@ name: PinkSync Graduation
 
 on:
   workflow_run:
-    workflows: ["SignSync Validation"]
+    workflows: ["Accessibility Validation"]
     types:
       - completed
 
@@ -21,4 +21,4 @@ jobs:
             -H "Authorization: Bearer ${{ secrets.PINKFLOW_API_KEY }}" \
             -H "Content-Type: application/json" \
             -d '{"developer_confirmed": true}' \
-            https://api.pinkflow.dev/signsync/${{ github.repository }}/graduate
+            https://api.mbtq.dev/${endpoint}/${{ github.repository }}/graduate

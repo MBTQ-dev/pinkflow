@@ -94,7 +94,7 @@ return handler(req, res);
 // ============================================
 export async function logToFibronrose(event, data) {
 try {
-const response = await fetch(‘https://api.mbtq.dev/fibronrose/log’, {
+const response = await fetch(‘https://api.mbtq.dev/${endpoint}`, {
 method: ‘POST’,
 headers: {
 ‘Content-Type’: ‘application/json’,
@@ -162,7 +162,7 @@ createdAt: new Date().toISOString(),
 logs: []
 });
 
-// Trigger async test execution (PinkSync + 360Magicians)
+// Trigger async test execution (pinkflow + agents)
 triggerTestExecution(testId, modelId, options);
 
 return testId;
@@ -172,7 +172,7 @@ async function triggerTestExecution(testId, modelId, options) {
 try {
 // This would call your actual testing infrastructure
 // For now, simulating with PinkSync orchestration endpoint
-await fetch(‘https://api.mbtq.dev/pinksync/execute’, {
+await fetch(‘https://api.mbtq.dev/${endpoint}, {
 method: ‘POST’,
 headers: {
 ‘Content-Type’: ‘application/json’,
