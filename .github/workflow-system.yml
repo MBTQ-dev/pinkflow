@@ -2,9 +2,12 @@ version: 1
 
 workflow_system:
   enabled: true
-  on: jobs:
+
+  runs:
+  
+    on: 
     
-  root: "workflow-system"
+    root: "workflow-system"
   workflows:
     - name: audit
       entry: "audit/audit_engine.py"
