@@ -1,8 +1,8 @@
-name: Rust Core CI & Gateway Delivery
+name: CI & Gateway Delivery
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
     paths:
       - 'create-mbtq-template/packages/core/**'
       - '.github/workflows/rust-ci.yml'
@@ -113,6 +113,5 @@ jobs:
         with:
           name: gateway-readiness-signal
           path: readiness.env
-
-        category: "/language:${{ matrix.language }}"
+          language: ${{ matrix.language }}
 
